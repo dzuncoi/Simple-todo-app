@@ -1,0 +1,7 @@
+#debug log
+npm-debug.log
+
+# Dependency dirs
+node_modules
+
+.babel_cache
