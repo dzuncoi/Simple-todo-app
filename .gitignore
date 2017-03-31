@@ -1,7 +1,10 @@
 #debug log
 npm-debug.log
 
-# Dependency dirs
+# dependency dirs
 node_modules
 
 .babel_cache
+
+# static build js
+src/static/js
