@@ -11,14 +11,15 @@ const schema = new Schema({
   description: String,
   created_at: {type: Number, default: 0},
   modified_at: {type: Number, default: 0},
-  status: {type: String, default: 'new'}
+  status: {type: String, default: 'new'},
+  category: String
 })
 
 /**
  * Pre-save hook
  */
 schema
-.pre('save', next => {
+.pre('save', function(next) {
   // Save date created and date modified
   const date = new Date().getTime();
   if (!this.created_at) {

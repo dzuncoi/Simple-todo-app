@@ -8,7 +8,6 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema({
   title: String,
-  description: String,
   created_at: {type: Number, default: 0},
   modified_at: {type: Number, default: 0}
 })
@@ -17,7 +16,7 @@ const schema = new Schema({
  * Pre-save hook
  */
 schema
-.pre('save', next => {
+.pre('save', function(next) {
   // Save date created and date modified
   const date = new Date().getTime();
   if (!this.created_at) {
