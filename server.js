@@ -34,7 +34,8 @@ app.get('/', (req, res) => {
   return res.status(status).render('index', { markup });
 });
 
-mongoose.connect('mongodb://dzuncoi:dzuncoi123@ds147900.mlab.com:47900/dh-todo-app');
+// Replace your Mongo URL here
+mongoose.connect('mongodb://<userId>:<Password>@<MongoURL>');
 db = mongoose.connection;
 db.once('open', () => {
   console.log('MONGOOSE CONNECTED');
